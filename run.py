@@ -3,3 +3,17 @@ import os
 from random import randint
 import numpy as np
 from getkey import getkey, keys
+
+graphic_ocean = np.array([
+    ["~", "~", "~", "~", "~"],
+    ["~", "~", "~", "~", "~"],
+    ["~", "~", "~", "~", "~"],
+    ["~", "~", "~", "~", "~"],
+    ["~", "~", "~", "~", "~"]])
+
+hidden_ocean = np.array([
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0]])
