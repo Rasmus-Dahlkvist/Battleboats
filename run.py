@@ -18,6 +18,11 @@ hidden_ocean = np.array([
     [0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0]])
 
+cursor_x = 2
+cursor_y = 2
+turns = 0
+hit_miss = ""
+
 
 def draw_graphics():
 
@@ -34,6 +39,9 @@ def draw_graphics():
                 
             elif hidden_ocean[x, y] == 3:
                 graphic_ocean[x, y] = "O" 
+
+    if turns != 20:
+        graphic_ocean[cursor_x, cursor_y] = "+"
 
     for y in range(5):
         for x in range(5):
