@@ -64,4 +64,24 @@ def spawn_boats():
 
 
 draw_graphics()
+spawn_boats()
 
+while (turns < 20):
+
+    # Controls
+    clicked_button = getkey()
+    
+    if clicked_button == keys.RIGHT and cursor_x + 1 != 5:
+        cursor_x += 1
+        
+    elif clicked_button == keys.DOWN and cursor_y + 1 != 5:
+        cursor_y += 1
+        
+    elif clicked_button == keys.LEFT and cursor_x - 1 != -1:
+        cursor_x -= 1
+        
+    elif clicked_button == keys.UP and cursor_y - 1 != -1:
+        cursor_y -= 1
+        
+    elif clicked_button == keys.ENTER:
+        turns += 1
