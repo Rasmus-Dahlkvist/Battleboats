@@ -86,6 +86,7 @@ while (turns < 20):
     elif clicked_button == keys.ENTER:
         turns += 1
 
+        # What the numbers mean in hidden_ocean
         # Hidden Water = 0
         # Hidden Boat = 1
         # Shot boat = 2
@@ -100,3 +101,6 @@ while (turns < 20):
             hidden_ocean[cursor_x, cursor_y] = 2
             graphic_ocean[cursor_x, cursor_y] = "X"
             hit_miss = "you hit a boat!"
+
+    draw_graphics()
+    hit_miss = ""
