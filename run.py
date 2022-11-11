@@ -70,7 +70,7 @@ while (turns < 20):
 
     # Controls
     clicked_button = getkey()
-    
+
     if clicked_button == keys.RIGHT and cursor_x + 1 != 5:
         cursor_x += 1
         
@@ -85,3 +85,18 @@ while (turns < 20):
         
     elif clicked_button == keys.ENTER:
         turns += 1
+
+        # Hidden Water = 0
+        # Hidden Boat = 1
+        # Shot boat = 2
+        # Shot water = 3
+
+        if hidden_ocean[cursor_x, cursor_y] == 0:
+            hidden_ocean[cursor_x, cursor_y] = 3
+            graphic_ocean[cursor_x, cursor_y] = "O"
+            hit_miss = "you Missed !!"
+            
+        elif hidden_ocean[cursor_x, cursor_y] == 1:
+            hidden_ocean[cursor_x, cursor_y] = 2
+            graphic_ocean[cursor_x, cursor_y] = "X"
+            hit_miss = "you hit a boat!"
