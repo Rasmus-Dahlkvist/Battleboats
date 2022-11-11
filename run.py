@@ -53,5 +53,15 @@ def draw_graphics():
     print(hit_miss)
 
 
+def spawn_boats():
+
+    for boats in range(5):
+        boat_x, boat_y = randint(0, 4), randint(0, 4), 
+
+        while hidden_ocean[boat_x][boat_y] == 1:
+            boat_x, boat_y = randint(0, 4), randint(0, 4)
+        hidden_ocean[boat_x][boat_y] = 1
+
+
 draw_graphics()
 
