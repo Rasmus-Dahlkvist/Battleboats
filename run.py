@@ -17,3 +17,9 @@ hidden_ocean = np.array([
     [0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0]])
+
+def draw_graphics():
+    
+    for y in range(5):
+        for x in range(5):
+            print(graphic_ocean[x, y], end=" ")
