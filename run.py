@@ -50,6 +50,8 @@ def draw_graphics():
             print(graphic_ocean[x, y], end=" ")
         print("")
 
+    print(hit_miss)
+
 
 draw_graphics()
 
