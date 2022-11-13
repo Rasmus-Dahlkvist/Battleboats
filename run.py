@@ -38,6 +38,7 @@ def logo():
 
 
 def score():
+
     print("Use Arrow Keys for navigation")
     print("Use Space Key for Action  \n")
     print("Scope: +")
@@ -75,7 +76,14 @@ def draw_graphics():
             print(graphic_ocean[x, y], end=" ")
         print("")
 
-    print(hit_miss)
+    if hit_boats == 5 or turns == difficulty:
+        if turns != difficulty:
+            print("\n Congratulations you won !")
+            
+        else:
+            print("\n You Lost !")
+
+        print("\n Press Enter.")
 
 
 def spawn_boats():
@@ -89,7 +97,7 @@ def spawn_boats():
 
 
 def reset():
-    
+
     global cursor_x
     global cursor_y
     global turns
