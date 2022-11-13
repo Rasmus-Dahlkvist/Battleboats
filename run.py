@@ -182,6 +182,8 @@ def controls():
 
 
 def rule_book():
+
+    os.system('clear')
     
     print("Game Controls: ", "Arrow keys + Space key \n")
     
