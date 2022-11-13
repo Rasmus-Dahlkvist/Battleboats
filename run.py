@@ -28,7 +28,9 @@ def logo():
     stars = "**********"
     star_line = "**********************************"
 
-    
+    print(star_line)
+    print(stars, "BATTLEBOATS!", stars)
+    print(star_line)
 
 
 def draw_graphics():
