@@ -115,6 +115,18 @@ def main_menu():
             hit_boats = 0
             hit_miss = ""
 
+            if choice == 0:
+                # Easy mode
+
+            elif choice == 1:
+                # Hard mode
+
+            elif choice == 2:
+                # Rule book
+
+            elif choice == 3:
+                # Exit game
+
 
 def draw_graphics():
 
