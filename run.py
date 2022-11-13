@@ -90,6 +90,8 @@ def main_menu():
             print(" ", option[1])
             print(" ", option[2])
             print(">", option[3], "<")
+        
+        key_pressed = getkey()
 
 
 def draw_graphics():
