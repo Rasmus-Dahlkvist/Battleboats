@@ -28,6 +28,8 @@ def logo():
     stars = "**********"
     star_line = "**********************************"
 
+    os.system('clear')
+
     print(star_line)
     print(stars, "BATTLEBOATS!", stars)
     print(star_line)
