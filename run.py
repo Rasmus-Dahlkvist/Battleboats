@@ -184,9 +184,11 @@ def main_menu():
             hit_miss = ""
 
             if choice == 0:
+                difficulty = 20
                 # Easy mode
 
             elif choice == 1:
+                difficulty = 10
                 # Hard mode
 
             elif choice == 2:
