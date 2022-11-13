@@ -88,6 +88,27 @@ def spawn_boats():
         hidden_ocean[boat_x][boat_y] = 1
 
 
+def reset():
+    
+    global cursor_x
+    global cursor_y
+    global turns
+    global hit_boats
+    global hit_miss
+    
+    cursor_x = 2
+    cursor_y = 2
+    turns = 0
+    hit_boats = 0
+    hit_miss = ""
+
+    for y in range(5):
+        for x in range(5):
+            hidden_ocean[x, y] = 0
+
+    spawn_boats()
+
+
 def main_menu():
 
     option = [
