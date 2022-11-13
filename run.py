@@ -181,6 +181,10 @@ def controls():
                 hit_miss = ""
 
 
+def rule_book():
+    
+
+
 def main_menu():
 
     option = [
