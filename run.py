@@ -93,7 +93,7 @@ spawn_boats()
 
 while (turns < 20):
 
-    # Controls
+    # Controls section
     clicked_button = getkey()
 
     if clicked_button == keys.RIGHT and cursor_x + 1 != 5:
@@ -108,7 +108,7 @@ while (turns < 20):
     elif clicked_button == keys.UP and cursor_y - 1 != -1:
         cursor_y -= 1
         
-    elif clicked_button == keys.ENTER:
+    elif clicked_button == keys.SPACE:
         turns += 1
 
         # What the numbers mean in hidden_ocean
