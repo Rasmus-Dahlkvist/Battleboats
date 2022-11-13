@@ -117,6 +117,15 @@ def reset():
     spawn_boats()
 
 
+def controls():
+    
+    global cursor_x
+    global cursor_y
+    global turns
+    global hit_boats
+    global hit_miss
+
+
 def main_menu():
 
     option = [
