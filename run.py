@@ -182,7 +182,7 @@ def controls():
 
 
 def rule_book():
-    
+
 
 
 def main_menu():
@@ -252,14 +252,31 @@ def main_menu():
             hit_miss = ""
 
             if choice == 0:
+
                 difficulty = 20
-                # Easy mode
+                os.system('clear')
+                reset()
+                logo()
+                score()
+                draw_graphics()
+                spawn_boats()
+                break
 
             elif choice == 1:
+
                 difficulty = 10
+                os.system('clear')
+                reset()
+                logo()
+                score()
+                draw_graphics()
+                spawn_boats()
+                break
+
                 # Hard mode
 
             elif choice == 2:
+                rule_book()
                 # Rule book
 
             elif choice == 3:
