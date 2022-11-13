@@ -196,6 +196,8 @@ def main_menu():
 
             elif choice == 3:
                 # Exit game
+                os.system('clear')
+                break
 
 
 draw_graphics()
