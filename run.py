@@ -49,6 +49,45 @@ def score():
     print("hit or miss: ", hit_miss, "\n")
 
 
+def draw_graphics():
+
+    for y in range(5):
+        for x in range(5):
+            if hidden_ocean[x, y] == 0:
+                graphic_ocean[x, y] = "~"
+                
+            elif hidden_ocean[x, y] == 1:
+                graphic_ocean[x, y] = "~" 
+                
+            elif hidden_ocean[x, y] == 2:
+                graphic_ocean[x, y] = "X" 
+                
+            elif hidden_ocean[x, y] == 3:
+                graphic_ocean[x, y] = "O" 
+
+    if turns != 20:
+        graphic_ocean[cursor_x, cursor_y] = "+"
+
+    os.system('clear')
+
+    for y in range(5):
+        for x in range(5):
+            print(graphic_ocean[x, y], end=" ")
+        print("")
+
+    print(hit_miss)
+
+
+def spawn_boats():
+
+    for boats in range(5):
+        boat_x, boat_y = randint(0, 4), randint(0, 4), 
+
+        while hidden_ocean[boat_x][boat_y] == 1:
+            boat_x, boat_y = randint(0, 4), randint(0, 4)
+        hidden_ocean[boat_x][boat_y] = 1
+
+
 def main_menu():
 
     option = [
@@ -126,45 +165,6 @@ def main_menu():
 
             elif choice == 3:
                 # Exit game
-
-
-def draw_graphics():
-
-    for y in range(5):
-        for x in range(5):
-            if hidden_ocean[x, y] == 0:
-                graphic_ocean[x, y] = "~"
-                
-            elif hidden_ocean[x, y] == 1:
-                graphic_ocean[x, y] = "~" 
-                
-            elif hidden_ocean[x, y] == 2:
-                graphic_ocean[x, y] = "X" 
-                
-            elif hidden_ocean[x, y] == 3:
-                graphic_ocean[x, y] = "O" 
-
-    if turns != 20:
-        graphic_ocean[cursor_x, cursor_y] = "+"
-
-    os.system('clear')
-
-    for y in range(5):
-        for x in range(5):
-            print(graphic_ocean[x, y], end=" ")
-        print("")
-
-    print(hit_miss)
-
-
-def spawn_boats():
-
-    for boats in range(5):
-        boat_x, boat_y = randint(0, 4), randint(0, 4), 
-
-        while hidden_ocean[boat_x][boat_y] == 1:
-            boat_x, boat_y = randint(0, 4), randint(0, 4)
-        hidden_ocean[boat_x][boat_y] = 1
 
 
 draw_graphics()
