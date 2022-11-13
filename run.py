@@ -93,6 +93,14 @@ def main_menu():
         
         key_pressed = getkey()
 
+        if key_pressed == keys.DOWN and choice + 1 != len(option):
+            choice += 1
+        
+        elif key_pressed == keys.UP and choice >= 1:
+            choice -= 1
+        
+        elif key_pressed == keys.ENTER:
+
 
 def draw_graphics():
 
