@@ -24,6 +24,13 @@ turns = 0
 hit_miss = ""
 
 
+def logo():
+    stars = "**********"
+    star_line = "**********************************"
+
+    
+
+
 def draw_graphics():
 
     for y in range(5):
@@ -104,3 +111,4 @@ while (turns < 20):
 
     draw_graphics()
     hit_miss = ""
+    
