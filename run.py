@@ -22,6 +22,8 @@ cursor_x = 2
 cursor_y = 2
 turns = 0
 hit_miss = ""
+hit_boats = 0
+difficulty = 0
 
 
 def logo():
@@ -33,6 +35,18 @@ def logo():
     print(star_line)
     print(stars, "BATTLEBOATS!", stars)
     print(star_line)
+
+
+def score():
+    print("Use Arrow Keys for navigation")
+    print("Use Space Key for Action  \n")
+    print("Scope: +")
+    print("Water: ~")
+    print("Miss:  O")
+    print("Hit:   X  \n")
+    print("Turn: ", turns, "/", difficulty)
+    print("hit boats: ", hit_boats)
+    print("hit or miss: ", hit_miss, "\n")
 
 
 def draw_graphics():
