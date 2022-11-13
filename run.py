@@ -101,6 +101,20 @@ def main_menu():
         
         elif key_pressed == keys.ENTER:
 
+            global cursor_x
+            global cursor_y
+            global difficulty
+            global turns
+            global hit_boats
+            global hit_miss
+            global play_again
+
+            cursor_x = 2
+            cursor_y = 2
+            turns = 0
+            hit_boats = 0
+            hit_miss = ""
+
 
 def draw_graphics():
 
