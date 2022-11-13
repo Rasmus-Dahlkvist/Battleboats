@@ -118,12 +118,57 @@ def reset():
 
 
 def controls():
-    
+
     global cursor_x
     global cursor_y
     global turns
     global hit_boats
     global hit_miss
+
+    while(turns < difficulty):
+                
+            # Controls
+            clicked_button = getkey()
+            if clicked_button == keys.RIGHT and cursor_x + 1 != 5:
+                cursor_x += 1
+                
+            elif clicked_button == keys.DOWN and cursor_y + 1 != 5:
+                cursor_y += 1
+                
+            elif clicked_button == keys.LEFT and cursor_x - 1 != -1:
+                cursor_x -= 1
+                
+            elif clicked_button == keys.UP and cursor_y - 1 != -1:
+                cursor_y -= 1
+                
+            elif clicked_button == keys.SPACE:
+
+                # What the numbers mean in hidden_ocean
+                # Hidden Water = 0
+                # Hidden Boat = 1
+                # Shot boat = 2
+                # Shot water = 3
+    
+                if hidden_ocean[cursor_x, cursor_y] < 2:
+                    turns += 1
+    
+                else:
+                    hit_miss = "you already shot there!"
+                 
+                if hidden_ocean[cursor_x, cursor_y] == 0:
+                    hidden_ocean[cursor_x, cursor_y] = 3
+                    graphic_ocean[cursor_x, cursor_y] = "O"
+                    hit_miss = "you Missed !!"
+                    
+                elif hidden_ocean[cursor_x, cursor_y] == 1:
+                    hidden_ocean[cursor_x, cursor_y] = 2
+                    graphic_ocean[cursor_x, cursor_y] = "X"
+                    hit_miss = "you hit a boat!"
+                    hit_boats += 1
+        
+            logo()
+            score()
+            draw_graphics()
 
 
 def main_menu():
@@ -212,7 +257,7 @@ def main_menu():
 draw_graphics()
 spawn_boats()
 
-while (turns < 20):
+'''while (turns < 20):
 
     # Controls section
     clicked_button = getkey()
@@ -249,5 +294,5 @@ while (turns < 20):
             hit_miss = "you hit a boat!"
 
     draw_graphics()
-    hit_miss = ""
+    hit_miss = ""'''
     
