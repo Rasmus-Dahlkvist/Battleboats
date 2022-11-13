@@ -60,7 +60,12 @@ def main_menu():
     choice = 0
 
     while(True):
-        
+
+        os.system('clear')
+
+        logo()
+
+        print("Use Arrow keys to navigate \nPress Enter to start a game\n")
 
 
 def draw_graphics():
