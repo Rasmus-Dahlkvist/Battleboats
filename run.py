@@ -67,6 +67,30 @@ def main_menu():
 
         print("Use Arrow keys to navigate \nPress Enter to start a game\n")
 
+        if choice == 0:
+            print(">", option[0], "<")
+            print(" ", option[1])
+            print(" ", option[2])
+            print(" ", option[3])
+            
+        elif choice == 1:
+            print(" ", option[0])
+            print(">", option[1], "<")
+            print(" ", option[2])
+            print(" ", option[3])
+        
+        elif choice == 2:
+            print(" ", option[0])
+            print(" ", option[1])
+            print(">", option[2], "<")
+            print(" ", option[3])
+
+        elif choice == 3:
+            print(" ", option[0])
+            print(" ", option[1])
+            print(" ", option[2])
+            print(">", option[3], "<")
+
 
 def draw_graphics():
 
