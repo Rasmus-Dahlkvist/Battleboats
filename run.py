@@ -39,8 +39,7 @@ def logo():
 
 def score():
 
-    print("Use Arrow Keys for navigation")
-    print("Use Space Key for Action  \n")
+    print("Game Controls: ", "Arrow keys + Space key \n")
     print("Scope: +")
     print("Water: ~")
     print("Miss:  O")
@@ -125,35 +124,36 @@ def controls():
     global hit_boats
     global hit_miss
 
-    while(turns < difficulty):
+    while (turns < difficulty):
                 
-            # Controls
-            clicked_button = getkey()
-            if clicked_button == keys.RIGHT and cursor_x + 1 != 5:
-                cursor_x += 1
+        # Controls
+        clicked_button = getkey()
+        
+        if clicked_button == keys.RIGHT and cursor_x + 1 != 5:
+            cursor_x += 1
                 
-            elif clicked_button == keys.DOWN and cursor_y + 1 != 5:
-                cursor_y += 1
+        elif clicked_button == keys.DOWN and cursor_y + 1 != 5:
+            cursor_y += 1
                 
-            elif clicked_button == keys.LEFT and cursor_x - 1 != -1:
-                cursor_x -= 1
+        elif clicked_button == keys.LEFT and cursor_x - 1 != -1:
+            cursor_x -= 1
                 
-            elif clicked_button == keys.UP and cursor_y - 1 != -1:
-                cursor_y -= 1
+        elif clicked_button == keys.UP and cursor_y - 1 != -1:
+            cursor_y -= 1
                 
-            elif clicked_button == keys.SPACE:
-
-                # What the numbers mean in hidden_ocean
-                # Hidden Water = 0
-                # Hidden Boat = 1
-                # Shot boat = 2
-                # Shot water = 3
+        elif clicked_button == keys.SPACE:
+            
+            # What the numbers mean in hidden_ocean
+            # Hidden Water = 0
+            # Hidden Boat = 1
+            # Shot boat = 2
+            # Shot water = 3
     
-                if hidden_ocean[cursor_x, cursor_y] < 2:
-                    turns += 1
+            if hidden_ocean[cursor_x, cursor_y] < 2:
+                turns += 1
     
-                else:
-                    hit_miss = "you already shot there!"
+            else:
+                hit_miss = "you already shot there!"
                  
                 if hidden_ocean[cursor_x, cursor_y] == 0:
                     hidden_ocean[cursor_x, cursor_y] = 3
@@ -172,7 +172,7 @@ def controls():
 
             if hit_boats == 5 or turns == difficulty:
 
-                while(True):
+                while (True):
                     key_pressed = getkey()
 
                     if key_pressed == keys.ENTER:
@@ -212,7 +212,7 @@ def main_menu():
 
     choice = 0
 
-    while(True):
+    while (True):
 
         os.system('clear')
 
@@ -302,6 +302,9 @@ def main_menu():
                 break
 
 
+logo()
+score()
+main_menu()
 draw_graphics()
 spawn_boats()
 
