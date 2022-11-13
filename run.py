@@ -170,6 +170,16 @@ def controls():
             score()
             draw_graphics()
 
+            if hit_boats == 5 or turns == difficulty:
+
+                while(True):
+                    key_pressed = getkey()
+
+                    if key_pressed == keys.ENTER:
+                        break
+
+                hit_miss = ""
+
 
 def main_menu():
 
