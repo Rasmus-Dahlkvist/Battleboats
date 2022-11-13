@@ -66,7 +66,7 @@ def draw_graphics():
             elif hidden_ocean[x, y] == 3:
                 graphic_ocean[x, y] = "O" 
 
-    if turns != 20:
+    if turns != difficulty:
         graphic_ocean[cursor_x, cursor_y] = "+"
 
     os.system('clear')
