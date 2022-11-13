@@ -57,6 +57,11 @@ def main_menu():
         "Rule Book",
         "Exit Game"]
 
+    choice = 0
+
+    while(True):
+        
+
 
 def draw_graphics():
 
