@@ -182,7 +182,24 @@ def controls():
 
 
 def rule_book():
+    
+    print("Game Controls: ", "Arrow keys + Space key \n")
+    
+    print("Sight: +")
+    print("Water: ~")
+    print("Miss:  O")
+    print("Hit:   X  \n")
+    
+    print("Easy Mode: 20 rounds \n")
+    print("Hard Mode: 10 rounds \n")
+    print("Boats are 1 square large \n")
+    print("Navigate with Arrow keys on keyboard \n")
+    print("Shoot with Space key on keyboard \n")
+    print("Objective: \n")
+    print("You are in dangerous waters\n")
+    print("Defeat all 5 enemy boats to win \n\n")
 
+    input("Press Enter to go back to Menu")
 
 
 def main_menu():
