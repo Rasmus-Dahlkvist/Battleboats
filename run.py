@@ -49,6 +49,15 @@ def score():
     print("hit or miss: ", hit_miss, "\n")
 
 
+def main_menu():
+
+    option = [
+        "Easy Mode",
+        "Hard Mode",
+        "Rule Book",
+        "Exit Game"]
+
+
 def draw_graphics():
 
     for y in range(5):
