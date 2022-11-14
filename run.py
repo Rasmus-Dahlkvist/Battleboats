@@ -37,7 +37,7 @@ def logo():
     print(star_line)
 
 
-def score():
+def game_stats():
 
     print("Game Controls: ", "Arrow keys + Space key \n")
     print("Sight: +")
@@ -173,7 +173,7 @@ def start_program():
                     hit_boats += 1
             
             logo()
-            score()
+            game_stats()
             draw_graphics()
 
             if hit_boats == 5 or turns == difficulty:
@@ -214,7 +214,7 @@ def start_game():
     os.system('clear')
     reset()
     logo()
-    score()
+    game_stats()
     draw_graphics()
     spawn_boats()
 
@@ -260,7 +260,7 @@ def main_menu():
             print(" ", option[1])
             print(" ", option[2])
             print(">", option[3], "<")
-        
+            
         key_pressed = getkey()
 
         if key_pressed == keys.DOWN and choice + 1 != len(option):
