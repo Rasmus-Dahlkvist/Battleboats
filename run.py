@@ -283,7 +283,7 @@ def main_menu():
                 break
 
             elif choice == 1:
-
+                # Hard mode
                 difficulty = 10
                 os.system('clear')
                 reset()
@@ -292,8 +292,6 @@ def main_menu():
                 draw_graphics()
                 spawn_boats()
                 break
-
-                # Hard mode
 
             elif choice == 2:
                 rule_book()
