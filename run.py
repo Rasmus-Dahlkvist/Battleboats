@@ -283,23 +283,13 @@ def main_menu():
             if choice == 0:
 
                 difficulty = 20
-                os.system('clear')
-                reset()
-                logo()
-                score()
-                draw_graphics()
-                spawn_boats()
+                start_game()
                 break
 
             elif choice == 1:
                 # Hard mode
                 difficulty = 10
-                os.system('clear')
-                reset()
-                logo()
-                score()
-                draw_graphics()
-                spawn_boats()
+                start_game()
                 break
 
             elif choice == 2:
