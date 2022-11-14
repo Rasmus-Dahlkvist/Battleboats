@@ -1,1 +1,2 @@
-# Your requirements go here
+getkey==0.6.5
+numpy==1.23.4
