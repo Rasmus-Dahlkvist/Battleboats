@@ -124,7 +124,11 @@ def controls():
     global hit_boats
     global hit_miss
 
-    while (turns < difficulty):
+    while (True):
+        
+        main_menu()
+        
+        while (turns < difficulty):
                 
         # Controls
         clicked_button = getkey()
