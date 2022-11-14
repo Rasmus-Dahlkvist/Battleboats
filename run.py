@@ -27,8 +27,8 @@ difficulty = 0
 
 
 def logo():
-    stars = "**********"
-    star_line = "**********************************"
+    stars = "************"
+    star_line = "**************************************"
 
     os.system('clear')
 
@@ -65,7 +65,7 @@ def draw_graphics():
             elif hidden_ocean[x, y] == 3:
                 graphic_ocean[x, y] = "O" 
 
-    if turns != difficulty:
+    if turns != difficulty and hit_boats != 5:
         graphic_ocean[cursor_x, cursor_y] = "+"
 
     # os.system('clear')
@@ -76,7 +76,7 @@ def draw_graphics():
         print("")
 
     if hit_boats == 5 or turns == difficulty:
-        if turns != difficulty:
+        if hit_boats == 5:
             print("\n Congratulations you won !")
             
         else:
@@ -223,7 +223,7 @@ def main_menu():
 
         logo()
 
-        print("Menu Controls: ", "Arrow keys + Enter key \nn")
+        print("Menu Controls:", "Arrow keys + Enter key \n")
 
         if choice == 0:
             print(">", option[0], "<")
