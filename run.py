@@ -68,8 +68,6 @@ def draw_graphics():
     if turns != difficulty and hit_boats != 5:
         graphic_ocean[cursor_x, cursor_y] = "+"
 
-    # os.system('clear')
-
     for y in range(5):
         for x in range(5):
             print(graphic_ocean[x, y], end=" ")
@@ -116,7 +114,7 @@ def reset():
     spawn_boats()
 
 
-def controls():
+def start_program():
 
     global cursor_x
     global cursor_y
@@ -307,7 +305,7 @@ def main_menu():
                 break
 
 
-controls()
+start_program()
 
 '''logo()
 score()
