@@ -68,7 +68,7 @@ def draw_graphics():
     if turns != difficulty:
         graphic_ocean[cursor_x, cursor_y] = "+"
 
-    os.system('clear')
+    # os.system('clear')
 
     for y in range(5):
         for x in range(5):
