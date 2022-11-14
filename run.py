@@ -95,6 +95,8 @@ def spawn_boats():
 
 def reset():
 
+    # Variables from outside this function
+
     global cursor_x
     global cursor_y
     global turns
@@ -115,6 +117,8 @@ def reset():
 
 
 def start_program():
+
+    # Variables from outside this function
 
     global cursor_x
     global cursor_y
@@ -195,7 +199,7 @@ def rule_book():
     print("Miss:  O")
     print("Hit:   X  \n")
     
-    print("Easy Mode: 20 rounds")
+    print("Easy Mode: 15 rounds")
     print("Hard Mode: 10 rounds \n")
     print("Boats are 1 square large \n")
     print("Navigate with Arrow keys on keyboard")
@@ -206,6 +210,7 @@ def rule_book():
 
 
 def start_game():
+
     os.system('clear')
     reset()
     logo()
@@ -266,6 +271,8 @@ def main_menu():
         
         elif key_pressed == keys.ENTER:
 
+            # Variables from outside this function
+
             global cursor_x
             global cursor_y
             global difficulty
@@ -281,7 +288,7 @@ def main_menu():
             hit_miss = ""
 
             if choice == 0:
-
+                # Easy mode
                 difficulty = 15
                 start_game()
                 break
@@ -293,59 +300,13 @@ def main_menu():
                 break
 
             elif choice == 2:
-                rule_book()
                 # Rule book
+                rule_book()
 
             elif choice == 3:
-                # Exit game
+                # Exit program
                 os.system('clear')
                 break
 
 
 start_program()
-
-'''logo()
-score()
-main_menu()
-draw_graphics()
-spawn_boats()'''
-
-'''while (turns < 20):
-
-    # Controls section
-    clicked_button = getkey()
-
-    if clicked_button == keys.RIGHT and cursor_x + 1 != 5:
-        cursor_x += 1
-        
-    elif clicked_button == keys.DOWN and cursor_y + 1 != 5:
-        cursor_y += 1
-        
-    elif clicked_button == keys.LEFT and cursor_x - 1 != -1:
-        cursor_x -= 1
-        
-    elif clicked_button == keys.UP and cursor_y - 1 != -1:
-        cursor_y -= 1
-        
-    elif clicked_button == keys.SPACE:
-        turns += 1
-
-        # What the numbers mean in hidden_ocean
-        # Hidden Water = 0
-        # Hidden Boat = 1
-        # Shot boat = 2
-        # Shot water = 3
-
-        if hidden_ocean[cursor_x, cursor_y] == 0:
-            hidden_ocean[cursor_x, cursor_y] = 3
-            graphic_ocean[cursor_x, cursor_y] = "O"
-            hit_miss = "you Missed !!"
-            
-        elif hidden_ocean[cursor_x, cursor_y] == 1:
-            hidden_ocean[cursor_x, cursor_y] = 2
-            graphic_ocean[cursor_x, cursor_y] = "X"
-            hit_miss = "you hit a boat!"
-
-    draw_graphics()
-    hit_miss = ""'''
-    
