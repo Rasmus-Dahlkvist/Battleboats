@@ -282,13 +282,13 @@ def main_menu():
 
             if choice == 0:
 
-                difficulty = 20
+                difficulty = 15
                 start_game()
                 break
 
             elif choice == 1:
                 # Hard mode
-                difficulty = 10
+                difficulty = 5
                 start_game()
                 break
 
