@@ -225,7 +225,7 @@ def main_menu():
         "Easy Mode",
         "Hard Mode",
         "Rule Book",
-        "Exit Game"]
+        '''"Exit Game"''']
 
     choice = 0
 
@@ -241,25 +241,25 @@ def main_menu():
             print(">", option[0], "<")
             print(" ", option[1])
             print(" ", option[2])
-            print(" ", option[3])
+            '''print(" ", option[3])'''
             
         elif choice == 1:
             print(" ", option[0])
             print(">", option[1], "<")
             print(" ", option[2])
-            print(" ", option[3])
+            '''print(" ", option[3])'''
         
         elif choice == 2:
             print(" ", option[0])
             print(" ", option[1])
             print(">", option[2], "<")
-            print(" ", option[3])
+            '''print(" ", option[3])'''
 
-        elif choice == 3:
+        '''elif choice == 3:
             print(" ", option[0])
             print(" ", option[1])
             print(" ", option[2])
-            print(">", option[3], "<")
+            print(">", option[3], "<")'''
 
         key_pressed = getkey()
 
@@ -303,10 +303,10 @@ def main_menu():
                 # Rule book
                 rule_book()
 
-            elif choice == 3:
+            '''elif choice == 3:
                 # Exit program
                 os.system('clear')
-                break
+                break'''
 
 
 start_program()
