@@ -205,6 +205,15 @@ def rule_book():
     input("Press Enter to go back to Menu")
 
 
+def start_game():
+    os.system('clear')
+    reset()
+    logo()
+    score()
+    draw_graphics()
+    spawn_boats()
+
+
 def main_menu():
 
     option = [
