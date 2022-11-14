@@ -288,7 +288,7 @@ def main_menu():
 
             elif choice == 1:
                 # Hard mode
-                difficulty = 5
+                difficulty = 10
                 start_game()
                 break
 
