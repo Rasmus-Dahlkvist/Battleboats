@@ -130,46 +130,46 @@ def controls():
         
         while (turns < difficulty):
                 
-        # Controls
-        clicked_button = getkey()
-        
-        if clicked_button == keys.RIGHT and cursor_x + 1 != 5:
-            cursor_x += 1
-                
-        elif clicked_button == keys.DOWN and cursor_y + 1 != 5:
-            cursor_y += 1
-                
-        elif clicked_button == keys.LEFT and cursor_x - 1 != -1:
-            cursor_x -= 1
-                
-        elif clicked_button == keys.UP and cursor_y - 1 != -1:
-            cursor_y -= 1
-                
-        elif clicked_button == keys.SPACE:
+            # Controls
+            clicked_button = getkey()
             
-            # What the numbers mean in hidden_ocean
-            # Hidden Water = 0
-            # Hidden Boat = 1
-            # Shot boat = 2
-            # Shot water = 3
-    
-            if hidden_ocean[cursor_x, cursor_y] < 2:
-                turns += 1
-    
-            else:
-                hit_miss = "you already shot there!"
-                 
+            if clicked_button == keys.RIGHT and cursor_x + 1 != 5:
+                cursor_x += 1
+                    
+            elif clicked_button == keys.DOWN and cursor_y + 1 != 5:
+                cursor_y += 1
+                    
+            elif clicked_button == keys.LEFT and cursor_x - 1 != -1:
+                cursor_x -= 1
+                    
+            elif clicked_button == keys.UP and cursor_y - 1 != -1:
+                cursor_y -= 1
+                    
+            elif clicked_button == keys.SPACE:
+                
+                # What the numbers mean in hidden_ocean
+                # Hidden Water = 0
+                # Hidden Boat = 1
+                # Shot boat = 2
+                # Shot water = 3
+        
+                if hidden_ocean[cursor_x, cursor_y] < 2:
+                    turns += 1
+        
+                else:
+                    hit_miss = "you already shot there!"
+                    
                 if hidden_ocean[cursor_x, cursor_y] == 0:
                     hidden_ocean[cursor_x, cursor_y] = 3
                     graphic_ocean[cursor_x, cursor_y] = "O"
                     hit_miss = "you Missed !!"
-                    
+                        
                 elif hidden_ocean[cursor_x, cursor_y] == 1:
                     hidden_ocean[cursor_x, cursor_y] = 2
                     graphic_ocean[cursor_x, cursor_y] = "X"
                     hit_miss = "you hit a boat!"
                     hit_boats += 1
-        
+            
             logo()
             score()
             draw_graphics()
@@ -181,8 +181,9 @@ def controls():
 
                     if key_pressed == keys.ENTER:
                         break
+                break
 
-                hit_miss = ""
+            hit_miss = ""
 
 
 def rule_book():
