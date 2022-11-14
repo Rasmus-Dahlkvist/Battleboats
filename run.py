@@ -307,11 +307,13 @@ def main_menu():
                 break
 
 
-logo()
+controls()
+
+'''logo()
 score()
 main_menu()
 draw_graphics()
-spawn_boats()
+spawn_boats()'''
 
 '''while (turns < 20):
 
