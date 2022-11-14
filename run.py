@@ -40,7 +40,7 @@ def logo():
 def score():
 
     print("Game Controls: ", "Arrow keys + Space key \n")
-    print("Scope: +")
+    print("Sight: +")
     print("Water: ~")
     print("Miss:  O")
     print("Hit:   X  \n")
@@ -201,7 +201,7 @@ def rule_book():
     print("Hard Mode: 10 rounds \n")
     print("Boats are 1 square large \n")
     print("Navigate with Arrow keys on keyboard")
-    print("Shoot with Space key on keyboard")
+    print("Shoot with Space key on keyboard \n")
     print("Objective: Defeat all 5 enemy boats to win \n\n")
 
     input("Press Enter to go back to Menu")
@@ -223,7 +223,7 @@ def main_menu():
 
         logo()
 
-        print("Use Arrow keys to navigate \nPress Enter to start a game\n")
+        print("Menu Controls: ", "Arrow keys + Enter key \nn")
 
         if choice == 0:
             print(">", option[0], "<")
