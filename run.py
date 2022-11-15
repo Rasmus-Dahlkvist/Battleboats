@@ -34,7 +34,6 @@ def logo():
     star_line = "**************************************"
 
     os.system('clear')
-
     print(star_line)
     print(stars, "BATTLEBOATS!", stars)
     print(star_line)
@@ -44,7 +43,6 @@ def game_stats():
     '''
     *Function description placeholder*
     '''
-
     print("Use Arrow keys to navigate \nUse Space key to shoot\n")
     print("Sight: +")
     print("Water: ~")
@@ -59,7 +57,6 @@ def draw_graphics():
     '''
     *Function description placeholder*
     '''
-
     for y in range(5):
         for x in range(5):
             if hidden_ocean[x, y] == 0:
@@ -73,22 +70,17 @@ def draw_graphics():
                 
             elif hidden_ocean[x, y] == 3:
                 graphic_ocean[x, y] = "O" 
-
     if turns != difficulty and hit_boats != 5:
         graphic_ocean[cursor_x, cursor_y] = "+"
-
     for y in range(5):
         for x in range(5):
             print(graphic_ocean[x, y], end=" ")
         print("")
-
     if hit_boats == 5 or turns == difficulty:
         if hit_boats == 5:
-            print("\n Congratulations you won !")
-            
+            print("\n Congratulations you won !")  
         else:
             print("\n You Lost !")
-
         print("\n Press Enter.")
 
 
@@ -96,10 +88,8 @@ def spawn_boats():
     '''
     *Function description placeholder*
     '''
-
     for boats in range(5):
         boat_x, boat_y = randint(0, 4), randint(0, 4), 
-
         while hidden_ocean[boat_x][boat_y] == 1:
             boat_x, boat_y = randint(0, 4), randint(0, 4)
         hidden_ocean[boat_x][boat_y] = 1
@@ -109,9 +99,6 @@ def reset():
     '''
     *Function description placeholder*
     '''
-
-    # Variables from outside this function
-
     global cursor_x
     global cursor_y
     global turns
@@ -127,7 +114,6 @@ def reset():
     for y in range(5):
         for x in range(5):
             hidden_ocean[x, y] = 0
-
     spawn_boats()
 
 
@@ -195,23 +181,18 @@ def rule_book():
     '''
     *Function description placeholder*
     '''
-
     os.system('clear')
-    
     print("Use Arrow keys to navigate \nUse Space key to shoot\n")
-    
     print("Sight: +")
     print("Water: ~")
     print("Miss:  O")
     print("Hit:   X  \n")
-    
     print("Easy Mode: 15 rounds")
     print("Hard Mode: 10 rounds \n")
     print("Boats are 1 square large \n")
     print("Navigate with Arrow keys on keyboard")
     print("Shoot with Space key on keyboard \n")
     print("Objective: Defeat all 5 enemy boats to win \n\n")
-
     input("Press Enter to go back to Menu")
 
 
@@ -219,7 +200,6 @@ def start_game():
     '''
     *Function description placeholder*
     '''
-
     os.system('clear')
     reset()
     logo()
@@ -232,58 +212,36 @@ def main_menu():
     '''
     *Function description placeholder*
     '''
-
     option = [
         "Easy Mode",
         "Hard Mode",
-        "Rule Book",
-        '''"Exit Game"''']
-
+        "Rule Book",]
     choice = 0
 
     while (True):
-
         os.system('clear')
-
         logo()
-
         print("Menu Controls:", "Arrow keys + Enter key \n")
 
         if choice == 0:
             print(">", option[0], "<")
             print(" ", option[1])
-            print(" ", option[2])
-            '''print(" ", option[3])'''
-            
+            print(" ", option[2])  
         elif choice == 1:
             print(" ", option[0])
             print(">", option[1], "<")
             print(" ", option[2])
-            '''print(" ", option[3])'''
-        
         elif choice == 2:
             print(" ", option[0])
             print(" ", option[1])
             print(">", option[2], "<")
-            '''print(" ", option[3])
-
-        elif choice == 3:
-            print(" ", option[0])
-            print(" ", option[1])
-            print(" ", option[2])
-            print(">", option[3], "<")'''
 
         key_pressed = getkey()
-
         if key_pressed == keys.DOWN and choice + 1 != len(option):
             choice += 1
-        
         elif key_pressed == keys.UP and choice >= 1:
             choice -= 1
-        
         elif key_pressed == keys.ENTER:
-
-            # Variables from outside this function
 
             global cursor_x
             global cursor_y
@@ -304,21 +262,14 @@ def main_menu():
                 difficulty = 15
                 start_game()
                 break
-
             elif choice == 1:
                 # Hard mode
                 difficulty = 10
                 start_game()
                 break
-
             elif choice == 2:
                 # Rule book
                 rule_book()
-
-            '''elif choice == 3:
-                # Exit program
-                os.system('clear')
-                break'''
 
 
 start_program()
