@@ -217,12 +217,10 @@ def main_menu():
         "Hard Mode",
         "Rule Book", ]
     choice = 0
-
     while (True):
         os.system('clear')
         logo()
         print("Use Arrow keys to navigate \nUse Enter key to select\n")
-
         if choice == 0:
             print(">", option[0], "<")
             print(" ", option[1])
@@ -235,14 +233,12 @@ def main_menu():
             print(" ", option[0])
             print(" ", option[1])
             print(">", option[2], "<")
-
         key_pressed = getkey()
         if key_pressed == keys.DOWN and choice + 1 != len(option):
             choice += 1
         elif key_pressed == keys.UP and choice >= 1:
             choice -= 1
         elif key_pressed == keys.ENTER:
-
             global cursor_x
             global cursor_y
             global difficulty
@@ -250,13 +246,11 @@ def main_menu():
             global hit_boats
             global hit_miss
             global play_again
-
             cursor_x = 2
             cursor_y = 2
             turns = 0
             hit_boats = 0
             hit_miss = ""
-
             if choice == 0:
                 # Easy mode
                 difficulty = 15
@@ -270,8 +264,6 @@ def main_menu():
             elif choice == 2:
                 # Rule book
                 rule_book()
-        else:
-            
 
 
 start_program()
