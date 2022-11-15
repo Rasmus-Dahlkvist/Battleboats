@@ -190,7 +190,7 @@ def rule_book():
     print("Navigate with Arrow keys on keyboard")
     print("Shoot with Space key on keyboard \n")
     print("Objective: Defeat all 5 enemy boats to win \n\n")
-    input("Press Enter to go back to Menu")
+    input("Press Enter to go back to Menu\n")
 
 
 def start_game():
