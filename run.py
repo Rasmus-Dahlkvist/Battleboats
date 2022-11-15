@@ -1,4 +1,3 @@
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
 import os
 from random import randint
 import numpy as np
@@ -28,7 +27,7 @@ difficulty = 0
 
 def logo():
     '''
-    *Function description placeholder*
+    This function creates a logo.
     '''
     stars = "************"
     star_line = "**************************************"
@@ -41,7 +40,7 @@ def logo():
 
 def game_stats():
     '''
-    *Function description placeholder*
+    This function shows graphic reminders and gameplay stats.
     '''
     print("Use Arrow keys to navigate \nUse Space key to shoot\n")
     print("Sight: +")
@@ -55,7 +54,7 @@ def game_stats():
 
 def draw_graphics():
     '''
-    *Function description placeholder*
+    This function creates and updates graphic
     '''
     for y in range(5):
         for x in range(5):
@@ -86,7 +85,7 @@ def draw_graphics():
 
 def spawn_boats():
     '''
-    *Function description placeholder*
+    This function places five boats randomly in hidden_ocean
     '''
     for boats in range(5):
         boat_x, boat_y = randint(0, 4), randint(0, 4), 
@@ -97,7 +96,7 @@ def spawn_boats():
 
 def reset():
     '''
-    *Function description placeholder*
+    This function resets the variables and hidden_ocean
     '''
     global cursor_x
     global cursor_y
@@ -119,11 +118,16 @@ def reset():
 
 def start_program():
     '''
-    *Function description placeholder*
+    This function contains the gameplay controls,
+    tells player when they hit wrong buttons,
+    adds to turns, tells player when they hit or miss,
+    stops gameplay when 5 boats are hit or when turns reach difficulty,
+    What the numbers mean in hidden_ocean:
+    Hidden Water = 0
+    Hidden Boats = 1
+    Shot boat = 2
+    Shot water = 3
     '''
-
-    # Variables from outside this function
-
     global cursor_x
     global cursor_y
     global turns
@@ -144,11 +148,7 @@ def start_program():
             elif clicked_button == keys.UP and cursor_y - 1 != -1:
                 cursor_y -= 1      
             elif clicked_button == keys.SPACE: 
-                # What the numbers mean in hidden_ocean
-                # Hidden Water = 0
-                # Hidden Boat = 1
-                # Shot boat = 2
-                # Shot water = 3
+                # Update graphics in hidden_ocean
                 if hidden_ocean[cursor_x, cursor_y] < 2:
                     turns += 1
                 else:
@@ -179,7 +179,7 @@ def start_program():
 
 def rule_book():
     '''
-    *Function description placeholder*
+    This function just tell player what the rules are
     '''
     os.system('clear')
     print("Use Arrow keys to navigate \nUse Space key to shoot\n")
@@ -198,7 +198,7 @@ def rule_book():
 
 def start_game():
     '''
-    *Function description placeholder*
+    This function starts the game
     '''
     os.system('clear')
     reset()
@@ -210,12 +210,12 @@ def start_game():
 
 def main_menu():
     '''
-    *Function description placeholder*
+    This function contains the main menu 
     '''
     option = [
         "Easy Mode",
         "Hard Mode",
-        "Rule Book",]
+        "Rule Book", ]
     choice = 0
 
     while (True):
@@ -270,6 +270,8 @@ def main_menu():
             elif choice == 2:
                 # Rule book
                 rule_book()
+        else:
+            
 
 
 start_program()
