@@ -221,7 +221,7 @@ def main_menu():
     while (True):
         os.system('clear')
         logo()
-        print("Menu Controls:", "Arrow keys + Enter key \n")
+        print("Use Arrow keys to navigate \nUse Enter key to select\n")
 
         if choice == 0:
             print(">", option[0], "<")
