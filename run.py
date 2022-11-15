@@ -27,6 +27,9 @@ difficulty = 0
 
 
 def logo():
+    '''
+    *Function description placeholder*
+    '''
     stars = "************"
     star_line = "**************************************"
 
@@ -38,8 +41,11 @@ def logo():
 
 
 def game_stats():
+    '''
+    *Function description placeholder*
+    '''
 
-    print("Game Controls: ", "Arrow keys + Space key \n")
+    print("Use Arrow keys to navigate \nUse Space key to shoot\n")
     print("Sight: +")
     print("Water: ~")
     print("Miss:  O")
@@ -50,6 +56,9 @@ def game_stats():
 
 
 def draw_graphics():
+    '''
+    *Function description placeholder*
+    '''
 
     for y in range(5):
         for x in range(5):
@@ -84,6 +93,9 @@ def draw_graphics():
 
 
 def spawn_boats():
+    '''
+    *Function description placeholder*
+    '''
 
     for boats in range(5):
         boat_x, boat_y = randint(0, 4), randint(0, 4), 
@@ -94,6 +106,9 @@ def spawn_boats():
 
 
 def reset():
+    '''
+    *Function description placeholder*
+    '''
 
     # Variables from outside this function
 
@@ -117,6 +132,9 @@ def reset():
 
 
 def start_program():
+    '''
+    *Function description placeholder*
+    '''
 
     # Variables from outside this function
 
@@ -127,72 +145,60 @@ def start_program():
     global hit_miss
 
     while (True):
-        
         main_menu()
-        
-        while (turns < difficulty):
-                
+        while (turns < difficulty):       
             # Controls
             clicked_button = getkey()
-            
             if clicked_button == keys.RIGHT and cursor_x + 1 != 5:
-                cursor_x += 1
-                    
+                cursor_x += 1    
             elif clicked_button == keys.DOWN and cursor_y + 1 != 5:
-                cursor_y += 1
-                    
+                cursor_y += 1      
             elif clicked_button == keys.LEFT and cursor_x - 1 != -1:
-                cursor_x -= 1
-                    
+                cursor_x -= 1      
             elif clicked_button == keys.UP and cursor_y - 1 != -1:
-                cursor_y -= 1
-                    
-            elif clicked_button == keys.SPACE:
-                
+                cursor_y -= 1      
+            elif clicked_button == keys.SPACE: 
                 # What the numbers mean in hidden_ocean
                 # Hidden Water = 0
                 # Hidden Boat = 1
                 # Shot boat = 2
                 # Shot water = 3
-        
                 if hidden_ocean[cursor_x, cursor_y] < 2:
                     turns += 1
-        
                 else:
-                    hit_miss = "you already shot there!"
-                    
+                    hit_miss = "you already shot there!"   
                 if hidden_ocean[cursor_x, cursor_y] == 0:
                     hidden_ocean[cursor_x, cursor_y] = 3
                     graphic_ocean[cursor_x, cursor_y] = "O"
-                    hit_miss = "you Missed !!"
-                        
+                    hit_miss = "you Missed !!"                        
                 elif hidden_ocean[cursor_x, cursor_y] == 1:
                     hidden_ocean[cursor_x, cursor_y] = 2
                     graphic_ocean[cursor_x, cursor_y] = "X"
                     hit_miss = "you hit a boat!"
                     hit_boats += 1
-            
+            # Test for wrong buttonclicks
+            else:
+                hit_miss = "Use Arrow keys or Space key instead!"           
             logo()
             game_stats()
             draw_graphics()
-
             if hit_boats == 5 or turns == difficulty:
-
                 while (True):
                     key_pressed = getkey()
-
                     if key_pressed == keys.ENTER:
                         break
                 break
-
             hit_miss = ""
 
 
 def rule_book():
+    '''
+    *Function description placeholder*
+    '''
 
     os.system('clear')
     
-    print("Game Controls: ", "Arrow keys + Space key \n")
+    print("Use Arrow keys to navigate \nUse Space key to shoot\n")
     
     print("Sight: +")
     print("Water: ~")
@@ -210,6 +216,9 @@ def rule_book():
 
 
 def start_game():
+    '''
+    *Function description placeholder*
+    '''
 
     os.system('clear')
     reset()
@@ -220,12 +229,15 @@ def start_game():
 
 
 def main_menu():
+    '''
+    *Function description placeholder*
+    '''
 
     option = [
         "Easy Mode",
         "Hard Mode",
         "Rule Book",
-        "Exit Game"]
+        '''"Exit Game"''']
 
     choice = 0
 
@@ -241,25 +253,25 @@ def main_menu():
             print(">", option[0], "<")
             print(" ", option[1])
             print(" ", option[2])
-            print(" ", option[3])
+            '''print(" ", option[3])'''
             
         elif choice == 1:
             print(" ", option[0])
             print(">", option[1], "<")
             print(" ", option[2])
-            print(" ", option[3])
+            '''print(" ", option[3])'''
         
         elif choice == 2:
             print(" ", option[0])
             print(" ", option[1])
             print(">", option[2], "<")
-            print(" ", option[3])
+            '''print(" ", option[3])
 
         elif choice == 3:
             print(" ", option[0])
             print(" ", option[1])
             print(" ", option[2])
-            print(">", option[3], "<")
+            print(">", option[3], "<")'''
 
         key_pressed = getkey()
 
@@ -303,10 +315,10 @@ def main_menu():
                 # Rule book
                 rule_book()
 
-            elif choice == 3:
+            '''elif choice == 3:
                 # Exit program
                 os.system('clear')
-                break
+                break'''
 
 
 start_program()
