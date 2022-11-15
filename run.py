@@ -225,7 +225,7 @@ def main_menu():
         "Easy Mode",
         "Hard Mode",
         "Rule Book",
-        '''"Exit Game"''']
+        "Exit Game"]
 
     choice = 0
 
