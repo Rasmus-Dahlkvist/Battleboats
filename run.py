@@ -60,13 +60,10 @@ def draw_graphics():
         for x in range(5):
             if hidden_ocean[x, y] == 0:
                 graphic_ocean[x, y] = "~"
-                
             elif hidden_ocean[x, y] == 1:
                 graphic_ocean[x, y] = "~" 
-                
             elif hidden_ocean[x, y] == 2:
-                graphic_ocean[x, y] = "X" 
-                
+                graphic_ocean[x, y] = "X"
             elif hidden_ocean[x, y] == 3:
                 graphic_ocean[x, y] = "O" 
     if turns != difficulty and hit_boats != 5:
@@ -77,7 +74,7 @@ def draw_graphics():
         print("")
     if hit_boats == 5 or turns == difficulty:
         if hit_boats == 5:
-            print("\n Congratulations you won !")  
+            print("\n Congratulations you won !")
         else:
             print("\n You Lost !")
         print("\n Press Enter.")
@@ -88,7 +85,7 @@ def spawn_boats():
     This function places five boats randomly in hidden_ocean
     '''
     for boats in range(5):
-        boat_x, boat_y = randint(0, 4), randint(0, 4), 
+        boat_x, boat_y = randint(0, 4), randint(0, 4)
         while hidden_ocean[boat_x][boat_y] == 1:
             boat_x, boat_y = randint(0, 4), randint(0, 4)
         hidden_ocean[boat_x][boat_y] = 1
