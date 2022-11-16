@@ -1,31 +1,95 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Battleboats !
+My take on the classic game of Battleships but on the web.
 
-Welcome Rasmus_Dahlkvist,
+Link to my [Github Repo](https://github.com/Rasmus-Dahlkvist/Battleboats)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Link to my [Live Site](https://new-battleboats-rd.herokuapp.com/)
 
-## Reminders
+![]()
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+game menu image
+![]()
 
-## Creating the Heroku app
+gameplay image
+![]()
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+rule book image
+![]()
 
-1. `heroku/python`
-2. `heroku/nodejs`
+---
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Design
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### Graphical :
+graphics design // explain what different numbers letters etcetera means
 
-Connect your GitHub repository and deploy as normal.
+closeup images on game area
+![]()
 
-## Constraints
+mention what was done with layout.html
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+### Workflow :
 
------
-Happy coding!
+flowchart image
+
+### Users pov :
+explain gameplay with text and pictures
+
+---
+
+## Testing
+pythonchecker link + image
+
+ci python lint + image
+
+gitpod terminal/console
+
+replit
+
+devtools (Only for the small changes in html)
+
+testing was done everytime i changed something or added something new
+
+### Bugs :
+All bugs found was fixed while building etc
+
+---
+
+## Code
+mention imports 
+mention python 
+mention html(very little)
+replit for convenience (have worked with it before)
+gitpod for commit and push 
+used git blabla
+
+---
+
+## Deployment
+github link etc
+heroku link etc
+
+## Technologies used
+everything used!!
+REPLIT
+ PYTHON 
+ GITPOD 
+ GITHUB
+  GIT 
+  libreoffice
+  colorspace(for html)
+  markdown(this readme)
+  etc
+
+---
+
+## Credits
+hermods
+links (from notes!)
+
+
+### Inspiration for this README :
+link (from notes!)
+
+### Special thanks
+
