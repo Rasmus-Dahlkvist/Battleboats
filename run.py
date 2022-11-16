@@ -48,8 +48,8 @@ def game_stats():
     print("Miss:  O")
     print("Hit:   X  \n")
     print("Turn: ", turns, "/", difficulty)
-    print("hit boats: ", hit_boats)
-    print("hit or miss: ", hit_miss, "\n")
+    print("Hit Boats: ", hit_boats)
+    print("Hit or Miss: ", hit_miss, "\n")
 
 
 def draw_graphics():
@@ -184,8 +184,8 @@ def rule_book():
     print("Water: ~")
     print("Miss:  O")
     print("Hit:   X  \n")
-    print("Easy Mode: 15 rounds")
-    print("Hard Mode: 10 rounds \n")
+    print("Easy Mode: 15 turns")
+    print("Hard Mode: 10 turns \n")
     print("Boats are 1 square large \n")
     print("Navigate with Arrow keys on keyboard")
     print("Shoot with Space key on keyboard \n")

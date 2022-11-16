@@ -1,20 +1,20 @@
 # Battleboats !
-My take on the classic game of Battleships but on the web.
+
+My take on the classic game of Battleships but in a terminal.
+
+This site is **not** tablet or mobile responsive.
 
 Link to my [Github Repo](https://github.com/Rasmus-Dahlkvist/Battleboats)
 
 Link to my [Live Site](https://new-battleboats-rd.herokuapp.com/)
 
-![]()
+![Full screen heroku image](/readme-images/heroku-full-screen.png)
 
-game menu image
-![]()
+![Game menu](/readme-images/)
 
-gameplay image
-![]()
+![Gameplay image](/readme-images/)
 
-rule book image
-![]()
+![Rule book image](/readme-images/)
 
 ---
 
