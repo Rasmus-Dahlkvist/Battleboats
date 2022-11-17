@@ -1,6 +1,8 @@
 # Battleboats !
 
-My take on the classic game of Battleships but in a terminal.
+This is my third portfolio project for Code Institute.
+
+I chose to build a classic game of Battleships using Python and the CI python template.
 
 This site is **not** tablet or mobile responsive.
 
@@ -14,11 +16,22 @@ Link to my [Live Site](https://new-battleboats-rd.herokuapp.com/)
 
 ## Design
 
-### Workflow :
+### Workflow
+
+Once the terminal has started my code :
+* You are in a menu with three choices.
+1. Easy Mode starts a new game with 15 turns.
+2. Hard Mode starts a new game with 10 turns.
+* When game is won click enter and you will come back to the menu.
+* When game is lost click enter and you will be back in the menu.
+3. Rule Book takes you to the rules section.
+* When you are done reading about the rules press enter to go back to the menu.
+
+Check out my flowchart below.
 
 ![Flowchart image](/readme-images/flowchart.png)
 
-### Users pov :
+### Users pov
 
 This does not belong in this project but i changed some colors on the live site and gave the run program button a new margin just to make it a little easier on the eyes.
 For this i used [ColorSpace](https://mycolor.space/)
@@ -79,7 +92,21 @@ And when i heard that Code institute had created their own [CI Python Linter](ht
 ![CI Python Test](/readme-images/python-test.png)
 
 ### Bugs :
-All of the bugs i found was fixed while building this program due to the nature of python code in general (if something goes wrong the program will stop working).
+
+* Potential bug:
+
+	I believe that this "graphical bug" has something to do with me clearing the terminal.
+	When testing in replit and gitpod terminals it is barely a problem.
+
+	Replit and Gitpod symptoms: Every seventh buttonclick (or so) makes all the text in the terminal dissappear for maybe half a second and then reappear.
+
+	In Heroko this is much more present and happens more often.
+
+	Also in Heroku the "graphics" get "messy" for half a second sometimes.
+
+  With that said, I have not experienced any error message or crash because of this problem.
+
+All of the bugs i found (except for the potential bug) was fixed while building this program due to the nature of python code in general (if something goes wrong the program will most likely stop working).
 
 ---
 
@@ -109,6 +136,22 @@ This is how to deploy to [Heroku](https://www.heroku.com/platform) :
 * Once you choose a deployment method your app will be built and a "open app" button will appear.
 16. Click the button to open your app.
 * After this you can find several ways to open your app.
+
+### Fork Repo :
+
+When you are in the repository you want to fork:
+
+Locate the "Fork" button on the top right of the page and click it
+
+### Create Local Clone :
+
+1. Under the repository name, click on the ‘code’ tab
+2. In the clone box, HTTPS tab, click on the clipboard icon
+3. In your IED open GitBash
+4. Changed the current working directory to the location you want the cloned directory to be made
+5. Type ‘git clone’ and then paste the URL copied from GitHub
+6. Press enter and the local clone will be created
+
 
 ---
 
@@ -140,6 +183,12 @@ This is how to deploy to [Heroku](https://www.heroku.com/platform) :
   * Git
   * Heroku
   * Python
+
+* Python libraries and imports
+  * import os was used for clearing the terminal
+  * from random import randint was used to randomize where the boats were located
+  * import numpy as np was used to create the matrix
+  * from getkey import getkey, keys was used to make the arrow keys, space key and enter key work
 
 ---
 
