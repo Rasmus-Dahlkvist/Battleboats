@@ -60,43 +60,55 @@ For this i used [ColorSpace](https://mycolor.space/)
     * The game controls and rules.
     * A message that prompts you to press **Enter key** to go back to the menu.
 
-4. You have the freedom to check the rules or play the game as many times as you like.
-
 ![Rule book image](/readme-images/rules.png)
+
+4. You have the freedom to check the rules or play the game as many times as you like.
 
 ---
 
 ## Testing
-pythonchecker link + image
 
-ci python lint + image
+* For testing the functionality of this code i mainly used [Replit](https://replit.com/) just because it is fast and easy and i have some experience with python code in [Replit](https://replit.com/) from before
+  * I also tested the functionality in the [Gitpod](https://www.gitpod.io/) terminal.
+  * This type of functional testing was done everytime i changed something or added something new in the code.
 
-gitpod terminal/console
+For testing the code for spelling errors etcetera i used [Pythonchecker](https://www.pythonchecker.com/)
 
-replit
+And when i heard that Code institute had created their own [CI Python Linter](https://pep8ci.herokuapp.com/) i started using that instead.
 
-devtools (Only for the small changes in html)
-
-testing was done everytime i changed something or added something new
+![CI Python Test](/readme-images/python-test.png)
 
 ### Bugs :
-All bugs found was fixed while building etc
-
----
-
-## Code
-mention imports 
-mention python 
-mention html(very little)
-replit for convenience (have worked with it before)
-gitpod for commit and push 
-used git blabla
+All of the bugs i found was fixed while building this program due to the nature of python code in general (if something goes wrong the program will stop working).
 
 ---
 
 ## Deployment
-github link etc
-heroku link etc
+
+This program was deployed using [Heroku](https://www.heroku.com/platform) together with [GitHub](https://github.com/)
+
+This is how to deploy to [Heroku](https://www.heroku.com/platform) :
+1. Create an account and log in.
+2. Find the dropdown menu that says "new" and click it.
+3. Click on "Create new app" 
+4. Choose a name for your app.
+5. Choose a region.
+6. Click "create app"
+7. In the settings tab click on Reveal Config Vars.
+8. In the key-section write "PORT".
+9. In the value-section write "8000".
+* There were no credentials required for this app.
+10. Click Add buildpack and choose python and nodejs in that order.
+11. Find the deploy tab and click it. 
+12. Select Github-Connect to Github.
+13. Enter your repository name and click Search.
+14. Click connect.
+* You get the choice of manual or automatic deployment
+15. I chose manual deployment because automatic did not seem to be reliable for me.
+* For **manual deployment** remember that you need to deploy again **every time** you **push** your code to github.
+* Once you choose a deployment method your app will be built and a "open app" button will appear.
+16. Click the button to open your app.
+* After this you can find several ways to open your app.
 
 ## Technologies used
 everything used!!
@@ -109,6 +121,13 @@ REPLIT
   colorspace(for html)
   markdown(this readme)
   etc
+
+  mention imports 
+mention python 
+mention html(very little)
+replit for convenience (have worked with it before)
+gitpod for commit and push 
+used git blabla
 
 ---
 
