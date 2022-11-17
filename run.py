@@ -61,11 +61,11 @@ def draw_graphics():
             if hidden_ocean[x, y] == 0:
                 graphic_ocean[x, y] = "~"
             elif hidden_ocean[x, y] == 1:
-                graphic_ocean[x, y] = "~" 
+                graphic_ocean[x, y] = "~"
             elif hidden_ocean[x, y] == 2:
                 graphic_ocean[x, y] = "X"
             elif hidden_ocean[x, y] == 3:
-                graphic_ocean[x, y] = "O" 
+                graphic_ocean[x, y] = "O"
     if turns != difficulty and hit_boats != 5:
         graphic_ocean[cursor_x, cursor_y] = "+"
     for y in range(5):
@@ -100,7 +100,7 @@ def reset():
     global turns
     global hit_boats
     global hit_miss
-    
+
     cursor_x = 2
     cursor_y = 2
     turns = 0
@@ -133,27 +133,27 @@ def start_program():
 
     while (True):
         main_menu()
-        while (turns < difficulty):       
+        while (turns < difficulty):
             # Controls
             clicked_button = getkey()
             if clicked_button == keys.RIGHT and cursor_x + 1 != 5:
-                cursor_x += 1    
+                cursor_x += 1
             elif clicked_button == keys.DOWN and cursor_y + 1 != 5:
-                cursor_y += 1      
+                cursor_y += 1
             elif clicked_button == keys.LEFT and cursor_x - 1 != -1:
-                cursor_x -= 1      
+                cursor_x -= 1
             elif clicked_button == keys.UP and cursor_y - 1 != -1:
-                cursor_y -= 1      
-            elif clicked_button == keys.SPACE: 
+                cursor_y -= 1
+            elif clicked_button == keys.SPACE:
                 # Update graphics in hidden_ocean
                 if hidden_ocean[cursor_x, cursor_y] < 2:
                     turns += 1
                 else:
-                    hit_miss = "you already shot there!"   
+                    hit_miss = "you already shot there!"
                 if hidden_ocean[cursor_x, cursor_y] == 0:
                     hidden_ocean[cursor_x, cursor_y] = 3
                     graphic_ocean[cursor_x, cursor_y] = "O"
-                    hit_miss = "you Missed !!"                        
+                    hit_miss = "you Missed !!"
                 elif hidden_ocean[cursor_x, cursor_y] == 1:
                     hidden_ocean[cursor_x, cursor_y] = 2
                     graphic_ocean[cursor_x, cursor_y] = "X"
@@ -161,7 +161,7 @@ def start_program():
                     hit_boats += 1
             # Test for wrong buttonclicks
             else:
-                hit_miss = "Use Arrow keys or Space key instead!"           
+                hit_miss = "Use Arrow keys or Space key instead!"
             logo()
             game_stats()
             draw_graphics()
@@ -207,7 +207,7 @@ def start_game():
 
 def main_menu():
     '''
-    This function contains the main menu 
+    This function contains the main menu
     '''
     option = [
         "Easy Mode",
@@ -221,7 +221,7 @@ def main_menu():
         if choice == 0:
             print(">", option[0], "<")
             print(" ", option[1])
-            print(" ", option[2])  
+            print(" ", option[2])
         elif choice == 1:
             print(" ", option[0])
             print(">", option[1], "<")
