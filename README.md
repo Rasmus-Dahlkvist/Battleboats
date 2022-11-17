@@ -110,34 +110,55 @@ This is how to deploy to [Heroku](https://www.heroku.com/platform) :
 16. Click the button to open your app.
 * After this you can find several ways to open your app.
 
-## Technologies used
-everything used!!
-REPLIT
- PYTHON 
- GITPOD 
- GITHUB
-  GIT 
-  libreoffice
-  colorspace(for html)
-  markdown(this readme)
-  etc
+---
 
-  mention imports 
-mention python 
-mention html(very little)
-replit for convenience (have worked with it before)
-gitpod for commit and push 
-used git blabla
+## Technologies used
+
+* For changing colors and margin in layout.html
+  * ColorSpace
+  * Devtools
+  * Html
+  * Css
+
+* For installing import modules to workspace
+  * Pip3
+
+* For making the flowchart
+  * LibreOffice Draw
+
+* For Testing
+  * Replit
+  * Pythonchecker
+  * CI Python Linter
+
+* For this readme
+  * Markdown
+
+* For Writing, Saving, and Deploying workspace
+  * Gitpod
+  * GitHub
+  * Git
+  * Heroku
+  * Python
 
 ---
 
 ## Credits
-hermods
-links (from notes!)
 
+This project was really hard but it would have been a lot harder if i had no experience in python from before.
 
-### Inspiration for this README :
-link (from notes!)
+* I learned lot of tricks i used for this project in "programming 1 python" on Hermods.
+* I used [Copyassignment](https://copyassignment.com/battleship-game-code-in-python/) to get an idea of the logic used to build a program like this.
+* I used the matrix found at [Tutorialspoint](https://www.tutorialspoint.com/python_data_structure/python_matrix.htm)
+* For problemsolving i used [W3Schools](https://www.w3schools.com/python/)
+* Inspiration for this readme and the deployment section in particular [cmikedev](https://github.com/cmikedev/battleship)
+* Help with flowchart [Programiz](https://www.programiz.com/article/flowchart-programming)
+
+---
 
 ### Special thanks
+
+* To my mentor Harry for feedback and tips.
+* To the people in slack channel # ask-us-anything.
+* To my friend Martin for support and help with avoiding imposter-syndrome.
 
